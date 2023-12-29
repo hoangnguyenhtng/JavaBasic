@@ -1,0 +1,34 @@
+1. Toán tử số học: Như trong C++
+2. Toán tử Bit: Ít sử dụng
+3. Toán tử quan hệ: 
+== so sánh bằng
+!= khác
+> lớn
+< nhỏ
+>= lớn hơn bằng
+<= nhỏ hơn bằng
+4. Toán tử logic
+&& AND
+|| OR
+^ XOR: Trả về true nếu và chỉ nếu chỉ một trong các giá trị là true, còn lại cho false
+! NOT
+5. Toán tử điều kiện
+Cú pháp: <bieuthuc1> ? <bieuthuc2> : <bieuthuc3>;
+-> bieuthuc1: Biểu thức logic. Trả về true hoặc false
+-> bieuthuc2: Nếu Là giá trị trả về nếu là true
+-> bieuthuc3: Nếu là giá trị trả về nếu là false
+
+String s = (a % b == 0) ? "a chia het cho b" : "a khong chia het cho b";
+6. Toán tử gán
+Toán tử gán = dùng để gán một giá trị vào một biến và có thể gán nhiều giá trị cho nhiều biến cùng lúc
+Ví dụ: 
+int var = 20;
+int p,q,r,s;
+p=q=r=s=var;
+
+7. Thứ tự ưu tiên của các toán tử
+    1. Toán tử đơn +,-,++,--
+    2. Toán tử số học và toán tử dịch *,/,+,-,<<,>>
+    3. Toán tử quan hệ như <,>,>=,<=,==,!=
+    4. Toán tử logic và Bit như &&,||,&,|,^
+    5. Toán tử gán =,*=,/=,+=,-=

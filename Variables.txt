@@ -1,0 +1,25 @@
+3 kiểu biến trong Java
+- Biến local (Biến cục bộ)
+  Biến cục bộ được khai báo trong các phương thức, hàm structor hoặc trong các block
+  Biến cục bộ được tạo bên trong các phương thức, structor, block và sẽ bị phá hủy khi kết thúc các phương thức, structor và block
+  Không dùng các access modifier trong khai báo biến cục bộ
+  Các biến cục bộ sẽ nằm trên vùng nhớ stack của bộ nhớ
+  Khởi tạo giá trị mặc định cho biến cục bộ mới có thể sử dụng
+ 
+- Biến instance (Biến toàn cục)
+  Biến instance được khai báo trong một lớp class, bên ngoài các phương thức, constructor và các block
+  Biến instance được lưu trong bộ nhớ heap
+  Biến instance được tạo khi một đối tượng được tạo bằng việc sử dụng từ khóa new và sẽ bị phá hủy khi đối tượng bị phá hủy
+  Bạn được phép sử dụng access modifier khi khai báo biến instance, mặc định là "default"
+  Biến instance có giá trị mặc định phụ thuộc vào kiểu dữ liệu của nó. Ví vậy, bạn sẽ không cần khởi tạo giá trị cho biến instance trước khi sử dụng
+  Bên trong class mà bạn khai báo biến instance 
+
+- Biến static (Biến tĩnh)
+  Khai báo với từ khóa static, phía bên ngoài các phương thức, constructor và block
+  Sẽ chỉ có duy nhất 1 bản sao của các biến static được tạo ra dù bạn tạo bao nhiêu đối tượng từ lớp tương ứng
+  Biến static được lưu trữ trong bộ nhớ static riêng
+  Biến static được tạo khi chương trình bắt đầu chạy và chỉ bị phá hủy khi chương trình dừng
+  Giá trị mặc định của biến static phụ thuộc vào kiểu dữ liệu bạn khai báo
+  Biến static được truy cập trông qua tên và class. Ví dụ TenClass.tenBien
+  Trong class, các phương thức sử dụng biến static bằng cách gọi tên của nó khi phương thức cx được khai báo với từ khóa static
+

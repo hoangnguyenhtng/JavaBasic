@@ -1,0 +1,29 @@
+Java Virtual Machine là một máy trừu tượng. Nó cung cấp runtime environment cho java bytecode có thể thực thi. 
+JVMs là nền tảng phụ thuộc, phù hợp cho rất nhiều nền tảng phần mềm và phần cứng
+JVM: - A specification
+     - An implementation: Its implementation is known as JRE (Java Runtime Environment).
+     - Runtime Instance: Khi bạn viết java command và chạy trong java class thì một instance của JVM sẽ được tạo mới
+Nhiệm vụ:
+    - Loads code
+    - Verifies code
+    - Executes code
+    - Provides runtime environment
+JVM cung cấp định nghĩa cho:
+    - Memory Area
+    - Class file format
+    - Register set
+    - Garbage-collected heap
+    - Fatal error reporting etc.
+Cấu trúc: Classloader
+    - Classloader: là một hệ thống con của JVM được sử dụng để nạp các tệp lớp. Bất cứ khi nào chúng ta chạy chương trình java, nó sẽ là trình đầu tiên nạp các lớp. Có 3 trình nạp được dựng sẵn trong java
+    1. Bootstrap Classloader
+    2. Extension Classloader
+    3. System/Application Classloader
+    - Class(Method) Area
+    Lưu trữ các cấu trúc trên mỗi lớp chẳng hạn như nhóm hằng số thời gian chạy, dữ liệu trường và phương thức, mã cho các phương thức
+    - Heap: Đây là vùng dữ liệu thời gian chạy trong đó các đối tượng được phân bố
+    - Stack: Vùng lưu trữ các frames. Nó chứ các biến cục bộ và một phần kết quả, đồng thời đóng góp vai trò trong việc gọi và trả về phương thức. Mỗi luồng có một ngăn xếp JVM riêng, được tạo cùng lúc với luồng. Một khung mới được tạo mỗi khi một phương thức được gọi
+    - Program Counter Register
+    - Native Method Stack
+    - Execution Engine
+    - Java Native Interface

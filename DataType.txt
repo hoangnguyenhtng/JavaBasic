@@ -1,0 +1,31 @@
+* Có 2 kiểu dữ liệu trong java
+1. Kiểu dữ liệu nguyên thủy
+byte : Dùng để lưu trữ kiểu số nguyên có kích thước một byte (8 bít)
+char : Dùng để lưu dũ liệu kí tự hoặc số nguyên không âm có kích thức 2 byte (16 bít)
+boolean : 1 bít (T/F)
+short : 2 byte (16 bít)
+int : 4 byte (32 bít)
+long : 8 byte
+float : 4 byte (32 bít)
+double : 8 byte (64 bít)
+
+2. Kiểu dữ liệu đối tượng
+Array : Một mảng của các dữ liệu cùng kiểu
+Class: Dữ liệu kiểu lớp đối tượng do người dùng tự định nghĩa. Chứa các thuộc tính và phương thức
+interface: Dữ liệu kiểu lớp giao tiếp do người dùng tự định nghĩa. Chứa các phương thức của giao tiếp
+
+* Ép kiểu trong Java
+Là việc gán giá trị của một biến có kiểu dữ liệu này tới biến khác có kiểu dữ liệu khác
+VD: float c = 35.8f;
+int b = (int)c + 1;
+
+- Có 2 loại ép kiểu: 
++ Nới rộng (Widening): Làm tròn số từ kiểu có kích thước nhỏ sang lớn
+
++ Thu hẹp (narrowwing): làm tròn từ kiểu dữ liệu có kích thước lớn hơn sang nhỏ hơn
+
+* Chuyển đổi các kiểu dữ liệu sử dụng parse
+Ví dụ đơn giản về việc chuyển đổi thành String thành int trong java
+String s = "100";
+int i =Integer.parseInt(s);
+
