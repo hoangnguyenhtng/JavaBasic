@@ -1,0 +1,2 @@
+Lập trình hướng đối tượng (OOP - Object-Oriented Programming) là một mô hình lập trình dựa trên khái niệm "đối tượng", mà trong đó, đối tượng chứa đựng các dữ liệu, trên các trường, thường được gọi là các thuộc tính và mã nguồn, được tổ chức thành nhiều phương thức
+Đây là một phương pháp hay mô
