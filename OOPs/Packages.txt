@@ -1,0 +1,6 @@
+* Package là một nhóm các kiểu tương tự của các lớp, giao diện và các Package Con
+Một gói trong java có thể được phân loại theo 2 hình thức: Package được dựng sẵn và Package do người dùng định nghĩa
+Lợi ích của việc dùng Package 
+- Sử dụng để phân loại lớp và Interface giúp dễ dàng bảo trì
+- Cung cấp bảo vệ truy cập
+- Khắc phục việc đặt trùng tên.
