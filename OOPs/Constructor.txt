@@ -1,0 +1,87 @@
+* Constructor
+Constructor trong java là một dạng đặc biệt của phương thức được sử dụng để khởi tạo các đối tượng
+Java Constructor được gọi tại thời điểm tạo đối tượng. Nó khởi tạo các giá trị để cung cấp dữ liệu cho các đối tượng, đó là lý do vì sao nó được gọi là constructor
+* Các quy tắc tạo constructor trong java
+Có 2 quy tắc cơ bản:
+- Tên constructor phải giống tên lớp chứa nó
+- Constructor không có kiểu trả về tường minh
+* Các kiểu của java constructor
+Có 2 kiểu của constructor 
+- Constructor mặc định (không tham số truyền vào)
++ Cú pháp: 
+<class_name>(){
+    //code
+}
++ Mục đích của constructor mặc định là gì?
+Constructor mặc định cung cấp các giá trị mặc định như 0, null, (tùy thuộc vào kiểu dữ liệu)... tới đối tượng được khởi tạo
+VD: 
+    class Student3{
+        int id;
+        String name;
+
+        void display(){
+            System.out.println(id + " " + name);
+        }
+
+        public static void main(String[] args){
+            Student3 s1 = new Student3();
+            Student3 s2 = new Student3();   
+            s1.display();
+            s2.display();
+        }
+    }
+- Constructor tham số trong java
+Một constructor có tham số truyền vào được gọi là constructor có tham số
+Constructor có tham só được sử dụng để cung cấp các giá trị khác nhau cho các đối tượng khác nhau
+
+    class Student4{
+        int id;
+        String name;
+
+        Student4(int i, String n){
+            id = i;
+            name = n;
+        }
+
+        void display(){
+            System.out.println(id + " " +name);
+        }
+
+        public static void main(String args[]){
+            Student4 s1 = new Student4(111,"Viet");
+            Student4 s2 = new Student4(222,"Tuts");
+            s1.display();
+            s2.display();
+        }
+    }
+** Quy tắc: Nếu không có constructor trong một lớp, trình biên dịch sẽ tự động tạo một constructor mặc định trong lớp đó
+
+* Constructor overloading trong java
+Là một kỹ thuật trong java. Bạn có thể tạo nhiều constructor trong cùng một lớp với danh sách tham số truyền vào khác nhau. Trình biên dịch phân biệt các constructor này thông qua số lượng và kiểu của các tham số truyền vào
+class Student5 {
+ int id;
+ String name;
+ int age;
+ 
+ Student5(int i, String n) {
+  id = i;
+  name = n;
+ }
+ 
+ Student5(int i, String n, int a) {
+  id = i;
+  name = n;
+  age = a;
+ }
+ 
+ void display() {
+  System.out.println(id + " " + name + " " + age);
+ }
+ 
+ public static void main(String args[]) {
+  Student5 s1 = new Student5(111, "Viet");
+  Student5 s2 = new Student5(222, "Tuts", 25);
+  s1.display();
+  s2.display();
+ }
+}
