@@ -1,0 +1,54 @@
+* Đối tượng
+Một thực thể có trạng thái và hành vi (Hay có thể gọi là thuộc tính và phương thức)
+Đặc điểm: 
+- Trạng thái: Đại diện cho dữ liệu (giá trị) của một đối tượng
+- Hành vi: Đại diện cho hành vi (chức năng) của một đối tượng 
+- Danh tính: Danh tính của một đối tượng được cài đặt thông qua một ID duy nhất. ID này được ẩn đối với user bên ngoài nhưng được bộ máy ảo JVM định danh từng đối tượng
+-> Đối tượng (Object) là một thể hiện của một lớp (Class). Lớp là một mẫu hoặc thiết kế từ đó các đối tượng tạo ra. Vì vậy đối tượng là thể hiện của một Lớp
+
+* Lớp
+Một lớp là một nhóm đối tượng có thuộc tính chung. Nó là một mẫu hoặc thiết kế từ đó các đối tượng được tạo ra
+Một lớp có thể chứa: 
+- Member data
+- Constructor 
+- Method
+- Function
+- Class and Interface
+
+Ví dụ: Lớp SinhVien
+public class SinhVien{
+    int id;
+    String name;
+    public static void main(String[] args){
+        SinhVien sv = new SinhVien();
+        System.out.println(sv.name);
+        System.out.println(sv.id);
+    }
+}
+
+-> Các cách để tạo đối tượng trong Java
+1. Sử dụng từ khóa new
+2. Sử dụng phương thức newInstance()
+3. Sử dụng phương thức clone()
+4. Sử dụng phương thức factory()
+
+* Đối tượng annonymous trong Java
+Đối tượng vô danh, một đối tượng không có tham chiếu gọi là đối tượng annonymous
+Nếu bạn sử dụng đối tượng 1 lần duy nhất, thì lựa chọn tạo đối tượng annonymous là tốt nhất
+
+Ví dụ: 
+public class Calculation{
+    void fact(int n){
+        int giaithua = 1;
+        for (int i = 0; i < n; i++){
+            giaithua = giaithua * i;
+        }
+        System.out.println("Giai thua cua " + n + giaithua)
+    }
+
+    public static void main(String[] args){
+
+        //goi phuong thuc cua doi tuong annonymous
+        new Calculation().fact(5);
+    }
+}

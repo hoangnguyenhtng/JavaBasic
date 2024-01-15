@@ -1,0 +1,80 @@
+* This
+Từ khóa this trong Java là một biến tham chiếu được sử dụng để tham chiếu tới đối tượng của lớp hiện tại
+Trong java từ khóa this có 6 cách sử dụng:
+1. Từ khóa this có thể được dùng để tham chiếu tới biến instance của lớp hiện tại.
+2. this() có thể được dùng để gọi Constructor của lớp hiện tại.
+3. Từ khóa this có thể được dùng để gọi phương thức của lớp hiện tại.
+4. Từ khóa this có thể được truyền như một tham số trong phương thức.
+5. Từ khóa this có thể được truyền như một tham số trong phương Constructor.
+6. Từ khóa this có thể được dùng để trả về instance của lớp hiện tại.
+
+* super
+Từ khóa super trong java là một biến tham chiếu được sử dụng để tham chiếu trực tiếp đến đối tượng của lớp cha gần nhất
+Bất cứ khi nào bạn tạo ra instance(thể hiện) của lớp con , một instance của lớp cha được tạo ra ngầm định, nghĩa là được tham chiếu bởi biến super
+
+Trong java, từ khóa super có 3 cách sử dụng:
+- Từ khóa super được sử dụng để tham chiếu trực tiếp đến biến instance của lớp cha gần nhất
+- super() được sử dụng để gọi trực tiếp Constructor của lớp cha
+- Từ khóa super() được sử dụng để gọi trực tiếp phương thức từ cha
+
+* final
+Từ khóa final trong java dùng để hạn chế người dùng. Từ khóa final có thể được sử dụng trong nhiều ngữ cảnh
+- Biến final: bạn không thể thay đổi giá trị của biến final (hằng số)
+- Phương thức final: bạn không thể ghi đè phương thức final
+- Lớp final: Không thể kế thừa
+- Biến static final trống
+
+* static
+- Biến static: Khi bạn khai báo một biến là static thì biến đó là biến tĩnh
+- Phương thức static: Khi bạn khai báo một phương thức là static, phương thức static
+- Khối static: Dùng để khởi tạo thành viên dữ liệu static
+
+- Lợi ích của biến static:
+Sử dụng biến static giúp chương trình sử dụng bộ nhớ hiệu quả hơn (Tiết kiệm bộ nhớ)
+** Thuộc tính static trong Java được chia sẻ tới tất cả các đối tượng
+
+Ví dụ chương trình đếm số. 
+TH1: Chương trình không sử dụng static
+public class Counter1 {
+    int count = 0; // sẽ lấy bộ nhớ khi instance được tạo ra
+ 
+    Counter1() {
+        count++;
+        System.out.println(count);
+    }
+ 
+    public static void main(String args[]) {
+ 
+        Counter1 c1 = new Counter1();
+        Counter1 c2 = new Counter1();
+        Counter1 c3 = new Counter1();
+ 
+    }
+}
+
+TH2: Chương trình đếm số sử dụng biến static
+public class Counter2 {
+    static int count = 0; // sẽ lấy bộ nhớ chỉ một lần
+ 
+    Counter2() {
+        count++;
+        System.out.println(count);
+    }
+ 
+    public static void main(String args[]) {
+ 
+        Counter2 c1 = new Counter2();
+        Counter2 c2 = new Counter2();
+        Counter2 c3 = new Counter2();
+ 
+    }
+}
+
+- Phương thức static: 
+1. Một phương thức static thuộc lớp chứ không thuộc đối tượng của lớp
+2. Một phương thức static gọi mà không cần tạo instance của một Lớp
+3. Phương thức static có thể truy cập biến static và có thể thay đổi giá trị của Nó
+
+- Có hai hạn chế chính đối với phương thức static. Đó là:
+1. Phương thức static không thể sử dụng biến non-static hoặc gọi trực tiếp phương thức non-static.
+2. Từ khóa this và super không thể được sử dụng trong ngữ cảnh static.

@@ -4,3 +4,17 @@ Lợi ích của việc dùng Package
 - Sử dụng để phân loại lớp và Interface giúp dễ dàng bảo trì
 - Cung cấp bảo vệ truy cập
 - Khắc phục việc đặt trùng tên.
+
+package mypack;
+public class Simple {
+    public static void main(String[] args) {
+        System.out.println("Learn Java package");
+    }
+}
+
+* Truy cập package từ package khác bên ngoài
+- Khai báo import package.*;
+- Khai báo import package.classname;
+- Sử dụng tên đầy đủ
+
+*Package bên trong một package con khác được gọi là subpackage trong java

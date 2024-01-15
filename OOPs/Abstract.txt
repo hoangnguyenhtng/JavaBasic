@@ -1,0 +1,73 @@
+* Một lớp được khai báo với từ khóa abstract là lớp abstract trong Java.
+Lớp abstract có nghĩa là lớp trừu tượng, nó có thể có các phương thức abstract hoặc non-abstract
+
+Tính trừu tượng là một tiến trình ẩn các cài đặt chi tiết và chỉ hiển thị tính năng tới người dùng
+Nói cách khác, nó chỉ hiển thị các thứ quan trọng tới người dùng 
+
+Tính trừu tượng giúp bạn tập trung vào đối tượng thay vì quan tâm đến cách nó thực hiện
+
+* Các cách để đạt được sự trừu tượng hóa
+1. Sử dụng lớp abstract
+2. Sử dụng Interface
+
+* Phương thức trừu tượng trong Java
+Một phương thức được khai báo là abstract và không có trình triển khai thì đó là phương thức trừu tượng
+Nếu muốn một lớp chứa phương thức cụ thể nhưng muốn triển khai thực sự phương thức đó để được quyết định bởi các lớp con, thì bạn có thể khai báo phương thức đó ở trong lớp cha dưới dạng abstract
+Một phương thức abstract thì không có thân phương thức
+Phương thức abstract sẽ không có định nghĩa, được theo sau bởi dấu chấm phẩy, không có dấu ngoặc nhọn theo sau
+
+Ví dụ:
+//Khai báo phương thức với từ khóa abstract và không có thân phương thức
+abstract void printStatus();
+
+* Ví dụ về lớp trừu tượng và phương thức trừu tượng trong Java
+
+abstract class Bike{
+    abstract void run();
+}
+class Honda extends Bike{
+    void run(){
+        System.out.println("running safely..");
+    }
+
+    public static void main(String[] args){
+        Bike obj = new Honda();
+        obj.run();
+    }
+}
+
+-> Kết quả: running safely..
+
+* Kế thừa lớp abstract trong Java
+Trong ví dụ này, Shape là lớp trừu tượng, trình triển khai của nó được cung cấp bởi lớp Rectangle và lớp Circle. Hai lớp này kế thừa lớp trừu tượng Shape
+
+//lop truu tuong Shape
+abstract class Shape{
+    abstract void draw();
+}
+
+//trong tinh huong nay, trinh trien khai duoc cung cap boi ai do
+//vi du: nguoi su dung cuoi cung nao do
+
+class Rectangle extends Shape{
+    void draw(){
+        System.out.println("Ve hinh chu nhat");
+    }
+}
+
+class Circle extends Shape{
+    void draw(){
+        System.out.println("Ve hinh tron");
+    }
+}
+
+//trong tinh huong nay, phuong thuc duoc goi boi lap trinh vien hoac nguoi dung
+class TestAbstract{
+    public static void main(String[] args){
+        //Trong tinh huong nay, doi tuong duoc cung cap thong qua phuong thuc
+        //Chang han nhu getShape()
+        Shape s = new Circle();
+        s.draw();
+    }
+}
+-> Ve hinh tron

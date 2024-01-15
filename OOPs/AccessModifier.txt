@@ -1,0 +1,65 @@
+Có 2 loại Access Modifier trong Java đó là: Access Modified và non-Access Modifier 
+
+* Access Modifier trong Java xác định phạm vi có thể truy cập của biến, phương thức, Constructor hoặc Lớp
+                In class     In package     Out package In child class        Out package
+- private          Y            N                      N                          N
+- default          Y            Y                      N                          N
+- protected        Y            Y                      Y                          N
+- public           Y            Y                      Y                          Y
+
+Ngoài ra, còn có nhiều Non-access Modifier như static, abstract, synchronized, native, volatile, transient,...
+
+1. private
+Ví dụ: 
+class A {
+    private int data = 40;
+ 
+    private void msg() {
+        System.out.println("Hello java");
+    }
+}
+ 
+public class Simple {
+    public static void main(String args[]) {
+        A obj = new A();
+        System.out.println(obj.data);// Compile Time Error
+        obj.msg();// Compile Time Error
+    }
+}
+
+* private constructor
+Nếu bạn tạo bất kỳ constructor là private trong lớp bạn sẽ không thể tạo instance của class bên ngoài Nó
+
+** Một lớp không thể là private hoặc protected, ngoại trừ lớp lồng nhau
+
+2. default
+Nếu bạn không khai báo modifier nào, thì nó chính là trường hợp mặc định. Default Access Modifier là chỉ được phép truy cập trong cùng package.
+
+Ví dụ về Default Access Modifier trong Java
+//Lưu file với tên A.java
+package demo;
+
+class A {
+    //Phạm vi truy cập cảu lớp A và phương thức của msg() là mặc định nên không thể truy cập từ bên ngoài package
+    void msg() {
+        System.out.println("Hello");
+    }
+}
+
+import demo;
+
+public class B {
+    public static void main(String[] args) {
+        A obj = new A(); //Compile Time Error
+        obj.msg();       //Compile Time Error
+    }
+}
+
+3. protected
+protected access modifier được truy cập bên trong package và bên ngoài package 
+Áp dụng cho biến, phương thức, constructor. Nó không áp dụng cho Lớp
+
+4. Phạm vi truy cập public
+public access modifier được truy cập ở mọi nơi
+
+
