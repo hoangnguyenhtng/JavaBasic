@@ -16,6 +16,7 @@
             System.out.println("Ten : " + ten );
             System.out.println("Tuoi : " + tuoi);
         }
+        
 
         public static void main(String args[]) {
             instanceVariable sv = new instanceVariable("Nguyen Van A");
